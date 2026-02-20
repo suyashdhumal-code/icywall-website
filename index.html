@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICYWALL &mdash; Intelligent Lab Management &amp; Device Security</title>
+    <meta name="description" content="ICYWALL builds LockStep, a cross-platform lab management system for monitoring, securing, and controlling 100+ devices in real time.">
+    <meta name="keywords" content="lab management, device monitoring, exam mode, screen broadcast, ICYWALL, LockStep, classroom management">
+    <meta name="author" content="ICYWALL">
+    <meta property="og:title" content="ICYWALL &mdash; Intelligent Lab Management &amp; Device Security">
+    <meta property="og:description" content="LockStep: Monitor, secure, and control 100+ lab devices in real time.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://icywall.me">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="36" height="36" rx="8" stroke="currentColor" stroke-width="2.5"/>
+                    <path d="M12 14L20 10L28 14V22L20 30L12 22V14Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <circle cx="20" cy="18" r="3" fill="currentColor"/>
+                    <line x1="20" y1="21" x2="20" y2="26" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span class="logo-text">ICYWALL</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn-primary nav-cta">Get Started</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-gradient"></div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">Lockstep a Monitoring and Management Platform</div>
+                <h1>Control Every Device.<br>Secure Every Exam.</h1>
+                <p class="hero-subtitle">LockStep is a cross-platform lab management system built for educators and IT admins. Monitor 100+ devices, lock down exams, broadcast your screen, and manage applications &mdash; all from one dashboard.</p>
+                <div class="hero-actions">
+                    <a href="contact.html" class="btn-primary btn-lg">
+                        <span>Request a Demo</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#features" class="btn-secondary btn-lg">
+                        <span>Explore Features</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-target="150">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Concurrent Devices</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="99">0</span><span class="stat-suffix">.9%</span>
+                        <span class="stat-label">Uptime SLA</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="3">0</span>
+                        <span class="stat-label">Platforms Supported</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="dashboard-preview">
+                    <div class="preview-header">
+                        <div class="preview-dots"><span></span><span></span><span></span></div>
+                        <span class="preview-title">LockStep Dashboard</span>
+                    </div>
+                    <div class="preview-body">
+                        <div class="device-card-mini online">
+                            <div class="device-status"></div>
+                            <span>Lab-PC-01</span>
+                            <span class="device-tag">Online</span>
+                        </div>
+                        <div class="device-card-mini online">
+                            <div class="device-status"></div>
+                            <span>Lab-PC-02</span>
+                            <span class="device-tag exam">Exam Mode</span>
+                        </div>
+                        <div class="device-card-mini offline">
+                            <div class="device-status"></div>
+                            <span>Lab-PC-03</span>
+                            <span class="device-tag offline">Offline</span>
+                        </div>
+                        <div class="device-card-mini online">
+                            <div class="device-status"></div>
+                            <span>Lab-PC-04</span>
+                            <span class="device-tag broadcast">Broadcast</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Core Features</span>
+                <h2>Everything you need to manage a modern lab</h2>
+                <p>From exam lockdown to live broadcasts &mdash; LockStep gives you complete control over every device in your lab.</p>
+            </div>
+
+            <div class="feature-showcase scroll-reveal">
+                <div class="feature-text">
+                    <span class="feature-label">Secure Assessment</span>
+                    <h3>Exam Mode</h3>
+                    <p>Lock down every device in the room with a single click. Exam mode disables Alt+Tab, blocks Task Manager, restricts USB access, and clears the clipboard &mdash; ensuring a fair testing environment for every student.</p>
+                    <ul class="feature-list">
+                        <li>Keyboard shortcut interception (Alt+Tab, Win key, Ctrl+Alt+Del prompt)</li>
+                        <li>USB storage blocking and clipboard restriction</li>
+                        <li>Tamper-proof agent &mdash; students cannot terminate the process</li>
+                        <li>One-click activation across all lab devices simultaneously</li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="showcase-card exam-card">
+                        <div class="sc-header">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                            <span>Exam Mode Active</span>
+                            <span class="sc-status active">Enforced</span>
+                        </div>
+                        <div class="sc-body">
+                            <div class="block-item blocked"><span class="block-dot"></span>Task Manager<span class="block-label">Blocked</span></div>
+                            <div class="block-item blocked"><span class="block-dot"></span>Alt+Tab<span class="block-label">Blocked</span></div>
+                            <div class="block-item blocked"><span class="block-dot"></span>USB Storage<span class="block-label">Blocked</span></div>
+                            <div class="block-item blocked"><span class="block-dot"></span>Clipboard<span class="block-label">Cleared</span></div>
+                            <div class="block-item allowed"><span class="block-dot"></span>Exam Browser<span class="block-label">Allowed</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-showcase reverse scroll-reveal">
+                <div class="feature-text">
+                    <span class="feature-label">Real-Time Monitoring</span>
+                    <h3>Live Screen View</h3>
+                    <p>See what every student is doing, right from your dashboard. View live screenshots across every connected device with configurable refresh intervals &mdash; from 1-second snapshots to 30-second overviews.</p>
+                    <ul class="feature-list">
+                        <li>Grid view of all device screens in real time</li>
+                        <li>Click-to-expand full-screen view of any device</li>
+                        <li>Configurable auto-refresh intervals (1s &ndash; 30s)</li>
+                        <li>Suspicious activity detection and visual alerts</li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="showcase-card screen-card">
+                        <div class="sc-header">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            <span>Screen Grid</span>
+                            <span class="sc-badge">Live</span>
+                        </div>
+                        <div class="screen-grid">
+                            <div class="screen-thumb"><div class="screen-label">PC-01</div></div>
+                            <div class="screen-thumb"><div class="screen-label">PC-02</div></div>
+                            <div class="screen-thumb highlight"><div class="screen-label">PC-03 &#9888;</div></div>
+                            <div class="screen-thumb"><div class="screen-label">PC-04</div></div>
+                            <div class="screen-thumb"><div class="screen-label">PC-05</div></div>
+                            <div class="screen-thumb"><div class="screen-label">PC-06</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-showcase scroll-reveal">
+                <div class="feature-text">
+                    <span class="feature-label">One-to-Many Streaming</span>
+                    <h3>Teacher Broadcast</h3>
+                    <p>Share your screen to every student device with sub-second latency. Powered by a WebRTC SFU, teacher broadcasts deliver real-time video that opens full-screen on student machines &mdash; perfect for demonstrations and walkthroughs.</p>
+                    <ul class="feature-list">
+                        <li>WebRTC-powered screen sharing via Mediasoup SFU</li>
+                        <li>Sub-second latency to 100+ devices simultaneously</li>
+                        <li>Full-screen, view-only mode on student machines</li>
+                        <li>Live viewer count and connected student list</li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="showcase-card broadcast-card">
+                        <div class="sc-header">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l22 22M16.72 11.06A10.94 10.94 0 0119 12.55"/><path d="M5 12.55a10.94 10.94 0 015.17-2.39"/><path d="M10.71 5.05A16 16 0 0122.56 9"/><path d="M1.42 9a15.91 15.91 0 014.7-2.88"/><path d="M8.53 16.11a6 6 0 016.95 0"/><circle cx="12" cy="20" r="1"/></svg>
+                            <span>Live Broadcast</span>
+                            <span class="sc-status live">On Air</span>
+                        </div>
+                        <div class="broadcast-preview">
+                            <div class="broadcast-screen">
+                                <div class="broadcast-content">
+                                    <div class="bc-bar"></div>
+                                    <div class="bc-bar short"></div>
+                                    <div class="bc-block"></div>
+                                    <div class="bc-bar"></div>
+                                </div>
+                            </div>
+                            <div class="broadcast-meta">
+                                <div class="viewer-count">
+                                    <div class="viewer-avatars">
+                                        <span class="avatar">A</span>
+                                        <span class="avatar">B</span>
+                                        <span class="avatar">C</span>
+                                        <span class="avatar more">+28</span>
+                                    </div>
+                                    <span>31 students viewing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-showcase reverse scroll-reveal">
+                <div class="feature-text">
+                    <span class="feature-label">Practical Exams</span>
+                    <h3>Application Allowance for Practicals</h3>
+                    <p>Create per-subject application profiles that whitelist only the tools students need. Deploy a C++ Practical profile that allows DevC++ and CMD while blocking everything else &mdash; then switch to a Design profile in seconds.</p>
+                    <ul class="feature-list">
+                        <li>Per-subject application whitelists (C++, Java, Python, Design)</li>
+                        <li>Pre-built profiles for common practical subjects</li>
+                        <li>Instant profile switching across all devices</li>
+                        <li>Custom profiles with drag-and-drop app selection</li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="showcase-card apps-card">
+                        <div class="sc-header">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                            <span>App Profiles</span>
+                        </div>
+                        <div class="app-profiles">
+                            <div class="app-profile active">
+                                <div class="profile-name">C++ Practical</div>
+                                <div class="profile-apps">
+                                    <span class="app-chip allowed">DevC++</span>
+                                    <span class="app-chip allowed">CMD</span>
+                                    <span class="app-chip blocked">Chrome</span>
+                                    <span class="app-chip blocked">Explorer</span>
+                                </div>
+                            </div>
+                            <div class="app-profile">
+                                <div class="profile-name">Java Lab</div>
+                                <div class="profile-apps">
+                                    <span class="app-chip allowed">IntelliJ</span>
+                                    <span class="app-chip allowed">Terminal</span>
+                                </div>
+                            </div>
+                            <div class="app-profile">
+                                <div class="profile-name">Design Studio</div>
+                                <div class="profile-apps">
+                                    <span class="app-chip allowed">Figma</span>
+                                    <span class="app-chip allowed">Photoshop</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="capabilities">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Platform Capabilities</span>
+                <h2>Built for scale, designed for simplicity</h2>
+            </div>
+            <div class="capabilities-grid">
+                <div class="capability-card scroll-reveal">
+                    <div class="cap-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h4>Cross-Platform Agent</h4>
+                    <p>Electron-based agent runs on Windows, macOS, and Linux with identical capabilities.</p>
+                </div>
+                <div class="capability-card scroll-reveal">
+                    <div class="cap-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                    </div>
+                    <h4>Role-Based Access</h4>
+                    <p>Superadmin, admin, and assistant roles with granular permission controls and optional 2FA.</p>
+                </div>
+                <div class="capability-card scroll-reveal">
+                    <div class="cap-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <h4>Remote Commands</h4>
+                    <p>Push URLs, run scripts, restart, or shut down devices remotely &mdash; individually or in bulk.</p>
+                </div>
+                <div class="capability-card scroll-reveal">
+                    <div class="cap-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h4>Smart Scheduling</h4>
+                    <p>Schedule commands and exam sessions ahead of time. Automate lab power-on and shutdown routines.</p>
+                </div>
+                <div class="capability-card scroll-reveal">
+                    <div class="cap-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h4>Enterprise Security</h4>
+                    <p>JWT auth with refresh rotation, rate limiting, NoSQL injection protection, and security headers.</p>
+                </div>
+                <div class="capability-card scroll-reveal">
+                    <div class="cap-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+                    </div>
+                    <h4>Docker &amp; PM2 Ready</h4>
+                    <p>Deploy with Docker Compose or scale horizontally with PM2 cluster mode and Redis pub/sub.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Getting Started</span>
+                <h2>Up and running in 3 steps</h2>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card scroll-reveal">
+                    <div class="step-number">01</div>
+                    <h3>Deploy the Server</h3>
+                    <p>Run the backend with Docker or PM2. Connect to your MongoDB instance and optionally configure Redis for multi-node scaling.</p>
+                </div>
+                <div class="step-card scroll-reveal">
+                    <div class="step-number">02</div>
+                    <h3>Install the Agent</h3>
+                    <p>Deploy the LockStep agent on lab devices. It auto-registers with the server over WebSocket and starts reporting metrics immediately.</p>
+                </div>
+                <div class="step-card scroll-reveal">
+                    <div class="step-number">03</div>
+                    <h3>Take Control</h3>
+                    <p>Open the dashboard to monitor, command, and secure devices. Activate exam mode, broadcast your screen, or push commands &mdash; all in real time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Pricing</span>
+                <h2>Plans that scale with your lab</h2>
+                <p>Start free with up to 25 devices. Upgrade when you need more power.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card scroll-reveal">
+                    <div class="pricing-header">
+                        <h3>Free / Starter</h3>
+                        <div class="price">$0<span>/month</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Up to 25 devices</li>
+                        <li>Live screen monitoring</li>
+                        <li>Basic exam mode</li>
+                        <li>Remote commands</li>
+                        <li>Community support</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary btn-block">Get Started Free</a>
+                </div>
+                <div class="pricing-card featured scroll-reveal">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Professional</h3>
+                        <div class="price">$8<span>/device/mo</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Up to 200 devices</li>
+                        <li>Teacher broadcast (SFU)</li>
+                        <li>Application allowance profiles</li>
+                        <li>Advanced exam mode</li>
+                        <li>Role-based access &amp; 2FA</li>
+                        <li>Priority email support</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary btn-block">Request a Demo</a>
+                </div>
+                <div class="pricing-card scroll-reveal">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">Custom</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Unlimited devices</li>
+                        <li>Multi-campus deployment</li>
+                        <li>Redis cluster &amp; PM2 scaling</li>
+                        <li>On-premise or cloud hosting</li>
+                        <li>Custom integrations</li>
+                        <li>Dedicated account manager</li>
+                    </ul>
+                    <a href="contact.html" class="btn-secondary btn-block">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Ready to take control of your lab?</h2>
+                <p>See LockStep in action. Schedule a personalized demo with our team and discover how ICYWALL can transform your lab management.</p>
+                <div class="hero-actions" style="justify-content: center;">
+                    <a href="contact.html" class="btn-primary btn-lg">
+                        <span>Schedule a Demo</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="mailto:icywall.me@gmail.com" class="btn-secondary btn-lg">
+                        <span>Email Us Directly</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo">
+                        <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+                            <rect x="2" y="2" width="36" height="36" rx="8" stroke="currentColor" stroke-width="2.5"/>
+                            <path d="M12 14L20 10L28 14V22L20 30L12 22V14Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <circle cx="20" cy="18" r="3" fill="currentColor"/>
+                            <line x1="20" y1="21" x2="20" y2="26" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span class="logo-text">ICYWALL</span>
+                    </a>
+                    <p class="footer-tagline">Intelligent lab management and device security for modern institutions.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="changelog.html">Changelog</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="contact.html">Contact</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <a href="mailto:icywall.me@gmail.com">icywall.me@gmail.com</a>
+                    <a href="https://instagram.com/icywall.me" target="_blank" rel="noopener">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ICYWALL. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://instagram.com/icywall.me" aria-label="Instagram" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <a href="mailto:icywall.me@gmail.com" aria-label="Email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

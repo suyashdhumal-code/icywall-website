@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy &mdash; ICYWALL</title>
+    <meta name="description" content="ICYWALL Privacy Policy — how we collect, use, and protect your data.">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="36" height="36" rx="8" stroke="currentColor" stroke-width="2.5"/>
+                    <path d="M12 14L20 10L28 14V22L20 30L12 22V14Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <circle cx="20" cy="18" r="3" fill="currentColor"/>
+                    <line x1="20" y1="21" x2="20" y2="26" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span class="logo-text">ICYWALL</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="/#features" class="nav-link">Features</a>
+                <a href="/#how-it-works" class="nav-link">How It Works</a>
+                <a href="/#pricing" class="nav-link">Pricing</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn-primary nav-cta">Get Started</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="page-hero compact">
+        <div class="hero-gradient"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="section-badge">Legal</span>
+                <h1>Privacy Policy</h1>
+                <p class="hero-subtitle">Last updated: February 20, 2026</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="legal-content">
+        <div class="container">
+            <div class="legal-body">
+
+                <h2>1. Introduction</h2>
+                <p>ICYWALL ("we", "our", or "us") operates the LockStep lab management platform. This Privacy Policy describes how we collect, use, store, and share information when you use our website, dashboard, and agent software (collectively, the "Service").</p>
+                <p>By using the Service, you agree to the collection and use of information in accordance with this policy.</p>
+
+                <h2>2. Information We Collect</h2>
+                <h3>2.1 Account Information</h3>
+                <p>When you register or request a demo, we collect:</p>
+                <ul>
+                    <li>Name, email address, and organization name</li>
+                    <li>Username and hashed password (we never store plaintext passwords)</li>
+                    <li>Role information (admin, assistant, superadmin)</li>
+                </ul>
+
+                <h3>2.2 Device Data</h3>
+                <p>When the LockStep agent is installed on managed devices, it reports:</p>
+                <ul>
+                    <li>Device hostname, operating system, and IP address (local network only)</li>
+                    <li>CPU and memory utilization metrics</li>
+                    <li>Online/offline status and last-seen timestamps</li>
+                    <li>Screenshots (when initiated by an authorized administrator)</li>
+                </ul>
+
+                <h3>2.3 Usage Data</h3>
+                <p>We automatically collect limited technical data to improve the Service:</p>
+                <ul>
+                    <li>Browser type and version when accessing the dashboard</li>
+                    <li>Pages visited and features used within the dashboard</li>
+                    <li>Error logs and performance metrics</li>
+                </ul>
+
+                <h2>3. How We Use Your Information</h2>
+                <p>We use collected information to:</p>
+                <ul>
+                    <li>Provide, maintain, and improve the LockStep platform</li>
+                    <li>Authenticate users and enforce role-based access control</li>
+                    <li>Deliver device monitoring, exam mode, and broadcast features</li>
+                    <li>Send transactional emails (account confirmation, password resets)</li>
+                    <li>Respond to support requests and demo inquiries</li>
+                    <li>Detect and prevent security incidents</li>
+                </ul>
+
+                <h2>4. Data Retention</h2>
+                <ul>
+                    <li><strong>Screenshots</strong> are automatically deleted after 24 hours by default (configurable by the institution administrator).</li>
+                    <li><strong>Device metrics</strong> (CPU, memory) are kept for up to 30 days for historical analysis.</li>
+                    <li><strong>Account data</strong> is retained as long as the account is active. Upon deletion, data is purged within 30 days.</li>
+                    <li><strong>Command logs</strong> are retained for audit purposes for up to 90 days.</li>
+                </ul>
+
+                <h2>5. Data Sharing</h2>
+                <p>We do not sell your data. We may share information only in these circumstances:</p>
+                <ul>
+                    <li><strong>With your institution:</strong> Administrators within your organization can access device data and user activity within their scope.</li>
+                    <li><strong>Service providers:</strong> We use trusted third-party infrastructure (hosting, database, error tracking) that process data on our behalf under strict confidentiality agreements.</li>
+                    <li><strong>Legal obligations:</strong> We may disclose data if required by law, legal process, or governmental request.</li>
+                </ul>
+
+                <h2>6. Security</h2>
+                <p>We take data protection seriously and implement industry-standard measures:</p>
+                <ul>
+                    <li>All API communication is encrypted via HTTPS/TLS</li>
+                    <li>Passwords are hashed using bcrypt with salt rounds</li>
+                    <li>JWT tokens with refresh rotation and expiration</li>
+                    <li>Rate limiting, NoSQL injection protection, and HTTP security headers</li>
+                    <li>Optional two-factor authentication (TOTP) for admin accounts</li>
+                    <li>WebSocket connections require token-based authentication</li>
+                </ul>
+
+                <h2>7. Your Rights</h2>
+                <p>Depending on your jurisdiction, you may have the right to:</p>
+                <ul>
+                    <li>Access the personal data we hold about you</li>
+                    <li>Request correction of inaccurate data</li>
+                    <li>Request deletion of your data</li>
+                    <li>Object to or restrict certain data processing</li>
+                    <li>Data portability (receive your data in a structured format)</li>
+                </ul>
+                <p>To exercise any of these rights, contact us at <a href="mailto:icywall.me@gmail.com">icywall.me@gmail.com</a>.</p>
+
+                <h2>8. Cookies</h2>
+                <p>The ICYWALL website uses minimal cookies:</p>
+                <ul>
+                    <li><strong>Authentication cookies:</strong> Required to maintain your logged-in session on the dashboard.</li>
+                    <li><strong>Preference cookies:</strong> Store UI preferences (theme, layout).</li>
+                </ul>
+                <p>We do not use third-party advertising or tracking cookies.</p>
+
+                <h2>9. Children's Privacy</h2>
+                <p>The Service is intended for use by educational institutions and their authorized personnel. We do not knowingly collect personal information from children under 13. The agent software collects device-level data only, not student personal data.</p>
+
+                <h2>10. Changes to This Policy</h2>
+                <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated revision date. Continued use of the Service after changes constitutes acceptance of the revised policy.</p>
+
+                <h2>11. Contact Us</h2>
+                <p>If you have questions about this Privacy Policy or our data practices, contact us:</p>
+                <ul>
+                    <li>Email: <a href="mailto:icywall.me@gmail.com">icywall.me@gmail.com</a></li>
+                    <li>Instagram: <a href="https://instagram.com/icywall.me" target="_blank" rel="noopener">@icywall.me</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo">
+                        <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+                            <rect x="2" y="2" width="36" height="36" rx="8" stroke="currentColor" stroke-width="2.5"/>
+                            <path d="M12 14L20 10L28 14V22L20 30L12 22V14Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <circle cx="20" cy="18" r="3" fill="currentColor"/>
+                            <line x1="20" y1="21" x2="20" y2="26" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span class="logo-text">ICYWALL</span>
+                    </a>
+                    <p class="footer-tagline">Intelligent lab management and device security for modern institutions.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <a href="/#features">Features</a>
+                    <a href="/#pricing">Pricing</a>
+                    <a href="/#how-it-works">How It Works</a>
+                    <a href="changelog.html">Changelog</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="contact.html">Contact</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <a href="mailto:icywall.me@gmail.com">icywall.me@gmail.com</a>
+                    <a href="https://instagram.com/icywall.me" target="_blank" rel="noopener">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ICYWALL. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://instagram.com/icywall.me" aria-label="Instagram" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <a href="mailto:icywall.me@gmail.com" aria-label="Email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
