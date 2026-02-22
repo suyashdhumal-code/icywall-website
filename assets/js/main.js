@@ -1,3 +1,25 @@
+// Send mailto with form data
+function sendMail() {
+    var firstName = document.getElementById('firstName').value;
+    var lastName = document.getElementById('lastName').value;
+    var email = document.getElementById('email').value;
+    var org = document.getElementById('org').value;
+    var devices = document.getElementById('devices').value;
+    var message = document.getElementById('message').value;
+
+    var subject = encodeURIComponent('LockStep Inquiry from ' + firstName + (lastName ? (' ' + lastName) : ''));
+    var body =
+        'First Name: ' + firstName + '%0D%0A' +
+        'Last Name: ' + lastName + '%0D%0A' +
+        'Email: ' + email + '%0D%0A' +
+        'Organization: ' + org + '%0D%0A' +
+        'Estimated Device Count: ' + devices + '%0D%0A' +
+        'Message: ' + encodeURIComponent(message);
+
+    var mailtoLink = 'mailto:icywall.me@gmail.com?subject=' + subject + '&body=' + body;
+    window.location.href = mailtoLink;
+    return false;
+}
 /* ═══════════════════════════════════════════════════════════════
    ICYWALL — Main JavaScript
    Handles: Navigation, Scroll animations, Particles, Counter, Form
