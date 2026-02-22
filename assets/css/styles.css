@@ -858,6 +858,85 @@ body:hover .cursor-glow {
     line-height: 1.6;
 }
 
+/* ─── Services & Products Polishing ─── */
+.services-grid,
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 28px;
+}
+
+.service-card,
+.product-card {
+    padding: 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent), var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    transition: transform 0.32s var(--ease-out), box-shadow 0.32s;
+}
+
+.service-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.service-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.products-grid .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card .product-cta {
+    margin-top: 18px;
+}
+
+.product-card .product-cta .btn-secondary {
+    width: auto;
+}
+
+/* Enhance hero readability */
+.hero-content {
+    max-width: 820px;
+    text-align: left;
+}
+
+.hero .hero-badge {
+    display: inline-block;
+    background: rgba(96,165,250,0.08);
+    color: var(--accent-light);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.hero-subtitle {
+    color: var(--text-secondary);
+    font-size: 17px;
+    margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+    .services-grid,
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding-top: 90px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+}
+
 @media (max-width: 768px) {
     .product-grid {
         grid-template-columns: 1fr;
