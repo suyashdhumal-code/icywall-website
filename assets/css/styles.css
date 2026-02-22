@@ -876,6 +876,25 @@ body:hover .cursor-glow {
     transition: transform 0.32s var(--ease-out), box-shadow 0.32s;
 }
 
+.service-card {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.service-card-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(59,130,246,0.06), rgba(6,182,212,0.02));
+    border: 1px solid rgba(255,255,255,0.02);
+    color: var(--accent-light);
+    flex-shrink: 0;
+}
+
 .service-card h3 {
     font-size: 18px;
     margin-bottom: 8px;
@@ -920,6 +939,15 @@ body:hover .cursor-glow {
     color: var(--text-secondary);
     font-size: 17px;
     margin-top: 12px;
+}
+
+/* Focus states */
+a:focus,
+button:focus,
+.btn-primary:focus,
+.btn-outline:focus {
+    outline: 3px solid rgba(59,130,246,0.12);
+    outline-offset: 2px;
 }
 
 @media (max-width: 900px) {
